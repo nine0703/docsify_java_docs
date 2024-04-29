@@ -10,7 +10,7 @@
 
 下面是 Arch Linux 官方的安装文件下载地址：Arch Linux - Downloads Arch Linux 安装映像下载地址
 
-```bash
+```
 https://archlinux.org/download/
 ```
 
@@ -38,7 +38,7 @@ VMWARE是一个开源免费的虚拟机软件。
 
  通过上下方向键可以自由选择相关的菜单。选择第一项
 
-```bash
+```
 Arch Linux Install medium (x86_64, BIOS)
 ```
 
@@ -48,7 +48,7 @@ Arch Linux Install medium (x86_64, BIOS)
 
 开始正式安装系统前，需要先对硬盘做分区操作。这需要指定可操作的硬盘，可以通过以下命令来确定当前系统有哪些可用的硬盘设备：
 
-```bash
+```
 fdisk -l
 ```
 
@@ -68,7 +68,7 @@ fdisk -l
 
 有了分区方案，输入以下命令开始分区操作：
 
-```bash
+```
 fdisk /dev/sda
 ```
 
@@ -78,7 +78,7 @@ fdisk /dev/sda
 
  这就是 fdisk 提供的分区操作界面了，通过如下操作来创建一个 1 GiB 的交换分区：
 
-```bash
+```
 输入 n 新建分区。
 输入 p 新建主分区。
 分区编号输入 1。
@@ -86,7 +86,7 @@ fdisk /dev/sda
 结束扇区输入 +1G。
 ```
 
-```bash
+```
 更新：分区方案换成128m boot 1G swap 剩余为filesystem
 进入fdisk 磁盘环境后
 p列出所有分区
@@ -111,20 +111,20 @@ p列出所有分区
 
 提供了有不同的格式化命令。首先来格式化boot分区：
 
-```bash
+```
 mkfs.fat -F32 /dev/sda1
 mkfs.vfat -F 32 -n "boot" /dev/sda1
 ```
 
 接着来格式化swap分区
 
-```bash
+```
 mkswap /dev/sda2
 ```
 
 主分区使用 ext4 格式的分区：
 
-```bash
+```
 mkfs.ext4 /dev/sda3
 ```
 
@@ -132,7 +132,7 @@ mkfs.ext4 /dev/sda3
 
 完成分区格式化后，接下来需要挂载分区。首先挂载根分区：
 
-```bash
+```
 mount /dev/sda2 /mnt
 ```
 
