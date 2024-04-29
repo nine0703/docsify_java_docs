@@ -82,6 +82,29 @@
             word-spacing: .05rem;
             text-indent: 1em;
         }
+        /* 在原有样式基础上添加移动端适配 */
+        @media screen and (max-width: 768px) {
+            .body2 {
+                padding: 20px; /* 调整 padding */
+            }
+
+            .avatar-container {
+                max-width: 100%; /* 图片容器宽度设置为100% */
+            }
+
+            .avatar {
+                width: 120px; /* 调整头像大小 */
+                height: 120px;
+            }
+
+            .text-card {
+                width: 100%; /* 文字卡片宽度设置为100% */
+            }
+
+            .text-content p {
+                text-indent: 0; /* 移除文字缩进 */
+            }
+        }
     </style>
 </head>
 <body>
