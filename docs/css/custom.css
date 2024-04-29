@@ -13,5 +13,15 @@
     padding: 1rem;
 }
 
+aside.toc-nav {
+    top: 15%;
+}
 
+.github-corner svg {
+    height: 50px;
+    width: 50px;
+}
 
+.app-nav {
+    margin: 20px 6% 0 0;
+}
