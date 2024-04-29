@@ -1,4 +1,94 @@
-```java
-
+```xml
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>C:\DEV\apache-maven-3.5.3\repository</localRepository>
+    <pluginGroups></pluginGroups>
+    <proxies></proxies>
+    <servers></servers>
+    <mirrors>
+        <mirror>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>netease</id>
+            <url>http://maven.netease.com/repository/public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>huaweicloud</id>
+            <url>https://repo.huaweicloud.com/repository/maven/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>tencent</id>
+            <url>https://mirrors.cloud.tencent.com/repository/maven/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>ustc</id>
+            <url>http://mirrors.ustc.edu.cn/maven/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>nju</id>
+            <url>http://maven.nju.edu.cn/repository/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>tsinghua</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>bit</id>
+            <url>http://mirror.bit.edu.cn/maven/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>neusoft</id>
+            <url>https://mirrors.neusoft.edu.cn/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>opencas</id>
+            <url>http://maven.opencas.cn/maven/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>bjtu</id>
+            <url>http://maven.bjtu.edu.cn/maven2/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+    <profiles>
+        <profile>
+            <id>JDK-1.9</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>1.9</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>1.9</maven.compiler.source>
+                <maven.compiler.target>1.9</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.9</maven.compiler.compilerVersion>
+            </properties>
+        </profile>
+    </profiles>
+</settings>
 ```
 
