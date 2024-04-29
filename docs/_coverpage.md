@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](icon.jpg)
+![logo](assets/icon.jpg)
 
 # Java搭建经验帮助文档
 

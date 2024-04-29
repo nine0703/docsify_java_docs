@@ -1,0 +1,17 @@
+/* sidebar active bug */
+.sidebar ul li[class=""]>a {
+    border-right: 2px solid;
+    color: var(--theme-color, #42b983);
+    font-weight: 600
+}
+/* section */
+.markdown-section pre {
+    padding: 0;
+}
+
+.markdown-section pre>code {
+    padding: 1rem;
+}
+
+
+
