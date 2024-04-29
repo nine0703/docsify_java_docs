@@ -1,0 +1,121 @@
+<head xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <script src="js/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .body2 {
+            width: 580px;
+            padding: 50px;
+            border-radius: 2%;
+            outline: 2px solid #000; /* 设置描边为2像素宽，黑色 */
+        }
+
+        .avatar-container {
+            width: 450px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            text-align: left;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        .info h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        .text-card {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .text-content p {
+            text-indent: 2em; /* 设置首行缩进为2个em */
+        }
+
+        b {
+            font-size: 16px;
+            width: 400px;
+            color: #666;
+            margin-bottom: 5px;
+            line-height: 1.6rem;
+            word-spacing: .05rem;
+            text-indent: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="body2">
+
+        <div class="avatar-container">
+            <div class="avatar">
+                <img src="assets/icon.jpg" alt="Avatar">
+            </div>
+        </div>
+
+        <div class="info">
+            <el-card class="text-card">
+                <div class="text-content">
+                    <b>
+                        <i class="el-icon-s-custom"> 姓名：小南</i>
+                        <i class="el-icon-male"> 性别：Male</i>
+                        <i class="el-icon-house"> 居住地：广东</i>
+                        <i class="el-icon-s-custom"> 年龄：21</i>
+                        <i class="el-icon-message"> 邮箱：2283148902@qq.com</i>
+                    </b>
+
+                    <p>「雨の降る日に、さよならを。」</p>
+                    <p>
+                        オサレ曲目指してみました。出来ないなりに頑張ったので英語間違ってても怒らないで下さい。（作者コメ転載）
+                        喧嘩した次の日に恋人が死んでしまう話だよ。くっそ悲しい歌だよ。（作者twitter転載）
+                        ごめん、ちょっと補足。その恋人が死んでしまった日は雨の日で、理由は不慮の事故だったんだけど、何年か経って新しい恋人が出来てもまだどこかで気持ちの整理がつかなくて雨が降ると君を思い出してしまって過去と現在がごっちゃになってるっていう設定があるよ。実はね。
+                    </p>
+                    <p>（twitter転載）『About me』</p>
+                </div>
+            </el-card>
+        </div>
+
+    </div>
+</body>
+
+</html>
