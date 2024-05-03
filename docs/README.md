@@ -1,7 +1,7 @@
 # Docs 全局指南
 
 #### 作业
-* [Java动态代理详解.md](/zh/2024.05.03作业.md)
+* [作业 2024.05.03](/zh/2024.05.03作业.md)
 
 ## Java
 * [MinIO-OSS](/zh/MinIO-OSS.md)
