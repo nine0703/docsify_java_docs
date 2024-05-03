@@ -8,7 +8,7 @@ https://nine0703.github.io/docsify_java_docs/
 
 ## Contributors
 
-❤️ Thanks for all the TDesign contributors：
+❤️ Thanks for all the docsify_java_docs contributors：
 
 ## License
 
