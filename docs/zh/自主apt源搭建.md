@@ -6,7 +6,7 @@
 
 首先，确保您的系统已经安装了以下软件包：`apt-transport-https`、`dpkg-dev`、`gnupg`。如果缺少其中的任何一个，请使用以下命令安装它们：
 
-```
+```shell
 sudo apt update
 sudo apt install apt-transport-https dpkg-dev gnupg
 ```
@@ -15,7 +15,7 @@ sudo apt install apt-transport-https dpkg-dev gnupg
 
 在您的系统上选择一个目录来存储APT源。通常，这个目录位于Web服务器的根目录下，例如`/var/www/html`。在该目录下创建几个子目录来存储不同版本的软件包，例如`stable`、`testing`、`unstable`等。
 
-```
+```shell
 sudo mkdir -p /var/www/html/apt/stable
 sudo mkdir -p /var/www/html/apt/testing
 sudo mkdir -p /var/www/html/apt/unstable
@@ -25,7 +25,7 @@ sudo mkdir -p /var/www/html/apt/unstable
 
 将您自己的软件包（deb文件）复制到相应的APT源目录中。您可以手动复制，或者使用`cp`命令。
 
-```
+```shell
 sudo cp your-package.deb /var/www/html/apt/stable
 ```
 
@@ -33,7 +33,7 @@ sudo cp your-package.deb /var/www/html/apt/stable
 
 在APT源目录中生成APT索引文件。索引文件告诉APT软件包的位置和元数据。
 
-```
+```shell
 cd /var/www/html/apt/stable
 sudo dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
 ```
@@ -42,13 +42,13 @@ sudo dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
 
 为了确保软件包的完整性和安全性，您可以使用GPG密钥来签名APT索引和软件包。首先，生成GPG密钥对：
 
-```
+```shell
 gpg --gen-key
 ```
 
 根据提示生成GPG密钥对。然后，导出公钥并复制到APT源目录：
 
-```
+```shell
 gpg --armor --export your@email.com > /var/www/html/apt/stable/public.key
 ```
 
@@ -56,7 +56,7 @@ gpg --armor --export your@email.com > /var/www/html/apt/stable/public.key
 
 在客户端系统上，您需要将您的APT源配置添加到`/etc/apt/sources.list`文件中。假设您的APT源地址是`http://your-server/apt/stable`，则在客户端上添加以下行：
 
-```
+```shell
 deb http://your-server/apt/stable ./ # 注意：末尾的"./"表示搜索当前目录
 ```
 
@@ -64,7 +64,7 @@ deb http://your-server/apt/stable ./ # 注意：末尾的"./"表示搜索当前�
 
 在客户端上导入您的GPG公钥，以便验证软件包的签名：
 
-```
+```shell
 wget -qO - http://your-server/apt/stable/public.key | sudo apt-key add -
 ```
 
@@ -72,7 +72,7 @@ wget -qO - http://your-server/apt/stable/public.key | sudo apt-key add -
 
 最后，更新APT缓存并开始使用您自己的APT源：
 
-```
+```shell
 sudo apt update
 ```
 
@@ -82,7 +82,7 @@ sudo apt update
 
 在服务器上配置好公开源之后，可以使用
 
-```
+```shell
 apt download example-package
 ```
 
@@ -92,7 +92,7 @@ apt download example-package
 
 将下载的软件包移动到您APT服务器的本地仓库目录。通常，本地仓库目录位于 
 
-```
+```shell
 /var/cache/apt/archives/
 ```
 
@@ -100,7 +100,7 @@ apt download example-package
 
 将您自己的软件包（deb文件）复制到相应的APT源目录中。您可以手动复制，或者使用`cp`命令。
 
-```
+```shell
 sudo cp /var/cache/apt/archives/your-package.deb /var/www/html/apt/stable
 ```
 
